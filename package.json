@@ -1,5 +1,5 @@
 {
-  "name": "messenger",
+  "name": "slicks-messenger",
   "version": "1.0.0",
   "description": "Sends both SMS and Email",
   "main": "app.js",
