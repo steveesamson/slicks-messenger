@@ -1,0 +1,27 @@
+{
+  "name": "messenger",
+  "version": "1.0.0",
+  "description": "Sends both SMS and Email",
+  "main": "app.js",
+  "dependencies": {
+    "nodemailer": "^1.2.1",
+    "nodemailer-smtp-pool": "^0.1.7",
+    "request": "^2.40.0",
+    "slicks-mysql": "^1.2.2",
+    "stud": "^1.1.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sms",
+    "email",
+    "mail",
+    "message",
+    "messenger"
+  ],
+  "author": "Steve S. Samson <stevee.samson@gmail.com>",
+  "license": "ISC"
+}
