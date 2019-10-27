@@ -3,11 +3,11 @@ var messanger = require('./libs/transport')(__dirname),
     config = require('./libs/messages'),
     slicks_mysql = require('slicks-mysql')({
         host: 'localhost',
-        user: 'konvajapp',
+        user: 'db-user',
         //-dateStrings: true,
         driver: 'mysql',
-        database: 'konvaj',
-        password: 'k0nv@j@pp'
+        database: 'db-name',
+        password: 'db-pass'
         ,
          debug_db: true
     }),
