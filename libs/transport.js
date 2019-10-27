@@ -5,25 +5,25 @@ var nodemailer = require('nodemailer'),
     stud = require('stud'),
     smtpPool = require('nodemailer-smtp-pool'),
     mailConfig = {
-        host: 'mail.konvaj.com',
+        host: 'mail-host',
         port: 25,
         auth: {
-            user: 'konvaj',
-            pass: 'k0nv@j'
+            user: 'mail-username',
+            pass: 'mail-user-pswd'
         },
         maxConnections: 5,
         maxMessages: 10
     },
     smsConfig = {
-        url: 'http://www.smslive247.com/http/index.aspx',
+        url: 'sms-api-url',
         method: 'GET',
         qs: {
             cmd: 'sendquickmsg',
-            owneremail: 'eccle2002@yahoo.com',
-            subacct: '_SHEPHERD_',
-            subacctpwd: '5h3ph3rd',
+            owneremail: 'owner-email',
+            subacct: 'sub_acct',
+            subacctpwd: 'sub_acc_pswd',
             message: '',
-            sender: 'Konvaj',
+            sender: 'Sender',
             sendto: '',
             msgtype: 0
         }
@@ -66,7 +66,7 @@ module.exports = function (base_dir) {
     var tpl = fs.readFileSync(base_dir + "/libs/mail.html", "utf8");
     return {
         sendMail: function (options, cb) {
-            options.from = 'konvaj<konvaj@konvaj.com>';
+            options.from = 'from-email-address';
 
             stud.template(tpl, options, function (error, str) {
 
